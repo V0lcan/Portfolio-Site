@@ -3,24 +3,32 @@ body {
     margin: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #fff;
+    background-color: var(--light-color);
     font-size: 12px;
     line-height: 1.5;
-    color: #282828;
+    color: var(--dark-color);
     font-family: 'Playfair Display', serif;
     height: 200vh;
+    scroll-behavior: smooth;
 }
 
-.spacer {
+:root {
+    --header-bg-color: var(#f3f3f3);
+    --header-bg-text-color: var(#f0f0f0);
+    --dark-color: var(#282828);
+    --light-color: var(#FFF);
+  }
+
+#spacer {
     height: 110px;
     width: 100vw;
-    background-color: red;
+    background-color: #FFF;
 }
 
 /* Social media banner */
 .banner {
     background-color: #3500D3;
-    color: #FFF;
+    color: var(--light-color);
     width: 200vw;
     height: 3vh;
     margin: 0;
@@ -48,7 +56,7 @@ body {
 }
 
 .banner a {
-    color: #FFF;
+    color: var(--light-color);
 }
 
 .object-1, .object-2 {
@@ -65,11 +73,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--light-color);
     outline: solid 3px #3500D3;
     width: 100vw;
     height: 70px;
-    color: #282828;
+    color: var(--dark-color);
     position: fixed;
     top: 40px;
     left: 0;
@@ -106,11 +114,11 @@ li:nth-child(2), li:nth-child(4) {
 
 li:hover {
     background-color: #3500D3;
-    color: #282828;
+    color: var(--dark-color);
 }
 
 li:hover a {
-    color: #FFF;
+    color: var(--light-color);
 }
 
 nav li:nth-child(4) {
@@ -118,7 +126,7 @@ nav li:nth-child(4) {
 }
 
 a {
-    color: #282828;
+    color: var(--dark-color);
     text-decoration: none;
     text-align: center;
 }
@@ -129,10 +137,6 @@ header, .header-wrapper {
     height: 80vh;
 }
 
-.header-wrapper {
-    
-}
-
 .header-bg {
     font-family: 'Noto Sans JP', sans-serif;
     position: absolute;
@@ -140,13 +144,16 @@ header, .header-wrapper {
     left: 0;
     z-index: -999;
     font-size: 200px;
-    color: #f0f0f0;
     text-align: center;
     width: 120vw;
     height: 110vh;
     transform: translateX(-100px) translatey(-150px);
     overflow: hidden;
-    background-color: #f3f3f3;
+    background-color: var(--header-bg-color);
+}
+
+.header-bg p {
+    color: var(--header-bg-text-color);
 }
 
 .header-content {
@@ -158,7 +165,7 @@ header, .header-wrapper {
 .header-content h1,h2 {
     margin: 0;
     padding: 0;
-    color: #282828;
+    color: var(--dark-color);
     width: 400px;
     padding-left: 5px;
     margin-top: 5px;
@@ -178,7 +185,7 @@ header, .header-wrapper {
 }
 
 .header-button {
-    background-color: #282828;
+    background-color: var(--dark-color);
     color: #3500D3;
     width: 130px;
     height: 50px;
@@ -187,10 +194,74 @@ header, .header-wrapper {
     font-size: 20px;
     display: table-cell;
     vertical-align: middle;
-    border: 3px #282828 solid;
+    border: 3px var(--dark-color) solid;
     transition: .1s ease-in-out;
 }
 
 .header-button:hover {
-    background-color: #FFF;
+    background-color: var(--light-color);
 }
+
+/*--------------------------------*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    top: 17px;
+    left: 17px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3500D3;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #282828;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #3500D3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  input:checked + .slider:before {
+    background-color: #FFF;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
-
+    
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/smiley.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/smile.png" type="image/x-icon">
     <!-- title -->
     <title>My portfolio</title>
     <!-- jQuery -->
@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <div class="spacer"></div>
+    <div id="spacer"></div>
     <div class="banner">
         <div class="object-1">
             <h3>Discord • Volcan#6699</h3>
@@ -55,7 +55,7 @@
         <h1>Albin Sandefalk</h1>
         <ul>
             <li>
-                <a href="">Home</a>
+                <a href="#spacer">Home</a>
             </li>
             <li>
                 <a href="">About</a>
@@ -66,15 +66,18 @@
             <li>
                 <a href="">Portfolio</a>
             </li>
+            <label class="switch">
+                <input type="checkbox" id="nightswitch" checked>
+                <span class="slider round"></span>
+            </label>
         </ul>
     </nav>
 
     <header>
         <div class="header-wrapper">
             <div class="header-bg">
-                <p>
-                    会社自体は非常に成功している会社です。痛み、
-                    仕事の悩み、方便なので、普通の建築家の職務や生
+                <p class="header-bg-p">
+                    会社自体は非常に成功している会社です 痛み、仕事の悩み、方便なので、普通の建築家の職務や生
                     活に間違いはないので、痛みも体も説明できる！彼はあら
                     探しをするでしょう
                 </p>
@@ -94,12 +97,14 @@
                         Want to find out more about what I can do?
                     </p>
                     <a href="">
-                        <div class="header-button">Find out</div>
+                        <div id="button1" class="header-button">Find out</div>
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Javascript -->
+    <script src="javascript/script.js"></script>
 </body>
 </html>
