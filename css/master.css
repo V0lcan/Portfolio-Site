@@ -1,7 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
-    overflow-y: auto;
+    overflow-y: scroll;;
     overflow-x: hidden;
     background-color: var(--light-color);
     font-size: 12px;
@@ -9,7 +13,6 @@ body {
     color: var(--dark-color);
     font-family: 'Playfair Display', serif;
     height: 200vh;
-    scroll-behavior: smooth;
 }
 
 :root {
