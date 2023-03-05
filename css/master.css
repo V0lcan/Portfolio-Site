@@ -17,7 +17,7 @@ body {
 
 :root {
     --header-bg-color: var(#f3f3f3);
-    --header-bg-text-color: var(#f0f0f0);
+    --header-bg-text-color: var(#eceaea);
     --dark-color: var(#282828);
     --light-color: var(#FFF);
   }
@@ -31,7 +31,7 @@ body {
 /* Social media banner */
 .banner {
     background-color: #3500D3;
-    color: var(--light-color);
+    color: #FFF;
     width: 200vw;
     height: 3vh;
     margin: 0;
@@ -59,7 +59,7 @@ body {
 }
 
 .banner a {
-    color: var(--light-color);
+    color: #FFF;
 }
 
 .object-1, .object-2 {

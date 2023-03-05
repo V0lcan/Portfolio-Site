@@ -3,7 +3,7 @@
 document.documentElement.style.setProperty('--light-color', '#FFF');
 document.documentElement.style.setProperty('--dark-color', '#282828');
 document.documentElement.style.setProperty('--header-bg-color', '#f3f3f3');
-document.documentElement.style.setProperty('--header-bg-text-color', '#f0f0f0');
+document.documentElement.style.setProperty('--header-bg-text-color', '#eceaea');
 
 // Get a reference to the checkbox with the ID "nightswitch"
 const nightSwitch = document.getElementById('nightswitch');
@@ -18,7 +18,7 @@ nightSwitch.addEventListener('change', function() {
     document.documentElement.style.setProperty('--light-color', '#FFF');
     document.documentElement.style.setProperty('--dark-color', '#282828');
     document.documentElement.style.setProperty('--header-bg-color', '#f3f3f3');
-    document.documentElement.style.setProperty('--header-bg-text-color', '#f0f0f0');
+    document.documentElement.style.setProperty('--header-bg-text-color', '#eceaea');
 
   } else {
 
