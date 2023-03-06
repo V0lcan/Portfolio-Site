@@ -268,3 +268,16 @@ header, .header-wrapper {
   .slider.round:before {
     border-radius: 50%;
   }
+
+
+/* MEDIA QUERIES */
+
+@media (max-width:1000px) {
+    nav h1 {
+        font-size: 1.1rem;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+}
